@@ -86,3 +86,8 @@ prospect_plot_pfunctions(2,1,subinclude)
 
 prospect_plot_pfunctions(2,2,subinclude)
 
+%% Figure S1
+
+% Commented out - takes a long time to compute for the encoding model
+% FigureS1; 
+
