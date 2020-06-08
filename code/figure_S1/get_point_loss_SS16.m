@@ -1,6 +1,6 @@
 %%
 
-function [this_mean] = get_point_loss_SnS(true_left_v,true_left_p,true_right_v,true_right_p,true_left_EV,this_right,noise_left_v,noise_left_p,alpha,gamma,sigma)
+function [this_mean] = get_point_loss_SS16(true_left_v,true_left_p,true_right_v,true_right_p,true_left_EV,this_right,noise_left_v,noise_left_p,alpha,gamma,sigma)
 
 % Pass lottery through non-linearity
 this_left    = get_pt_gain_utility(noise_left_v,alpha) .* get_pt_prob(noise_left_p,gamma);

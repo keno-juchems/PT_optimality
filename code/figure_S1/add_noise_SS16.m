@@ -1,7 +1,7 @@
 %%
 
 
-function [true_left_p,true_left_v,true_right_p,true_right_v,noise_left_p,noise_left_v] = add_noise_SnS(left_v,left_p,right_v,right_p,noise,steps)
+function [true_left_p,true_left_v,true_right_p,true_right_v,noise_left_p,noise_left_v] = add_noise_SS16(left_v,left_p,right_v,right_p,noise,steps)
 
 % Expand the lottery space
 true_left_p = repmat(left_p,1,steps);
