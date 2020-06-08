@@ -87,10 +87,10 @@ end
 best_sigmas = linspace(0,1,6); % Saturates at ~sigma = 1
 figure();
 for s = 1:6
-    SnS_model  = get_loss_ptprob_SnS(alphas,gammas,n_iter+1,best_sigmas(s),left_v,left_p,right_v,right_p,left,right);
+    SS16_model  = get_loss_ptprob_SS16(alphas,gammas,n_iter+1,best_sigmas(s),left_v,left_p,right_v,right_p,left,right);
     subplot(1,6,s);
-    vals = linspace(min(SnS_model(:)),max(SnS_model(:)),20);
-    contourf(X,Y,SnS_model,20);
+    vals = linspace(min(SS16_model(:)),max(SS16_model(:)),20);
+    contourf(X,Y,SS16_model,20);
     hold on;
     l1 = line([-3,3],[0,0]);
     l1.Color = [0,0,0];
@@ -98,7 +98,7 @@ for s = 1:6
     l2 = line([0,0,],[-3,3]);
     l2.Color = [0,0,0];
     l2.LineWidth = 1.5;
-    [i,j] = find(SnS_model == max(SnS_model(:)));
+    [i,j] = find(SS16_model == max(SS16_model(:)));
     plot(X(i,j),Y(i,j),'o','markersize',15,'markeredgecolor','k','linewidth',4);
     title(sprintf('Encoding noise - sigma: %1.2f',best_sigmas(s)));
 end
